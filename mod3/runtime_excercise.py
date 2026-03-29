@@ -32,6 +32,7 @@ O(n)
 for i in range(5):
     for j in range(5):
         print(i+j)
+O(n^2)
 
 5.
 
@@ -40,6 +41,8 @@ for i in range(5):
         print(i+j)
     for x in range(5):
         print(i+x)
+O(n^2)
+
 6.
 
 a = 0
@@ -47,3 +50,4 @@ i = N
 while (i > 0):
   a += i
   i //= 2
+O(log(2))
