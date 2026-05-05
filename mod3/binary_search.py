@@ -15,17 +15,22 @@ def binary_search(nums, target):
     left_index = 0
     right_index = len(nums) - 1
     while True:
-        guess = (nums[left_index] + nums[right_index]) // 2
+        guess = ((right_index - left_index) // 2) + left_index
         print("left index: " + str(left_index))
         print("right index " + str(right_index))
         print(guess)
-        if guess < target:
+        #if nums[left_index] > guess:
+            #print("xxxx")
+        #else: 
+            #if nums[right_index] < guess:
+        if nums[guess] < target:
             left_index = guess + 1
-        if guess > target:
+        if nums[guess] > target:
             right_index = guess - 1
-        if guess == target:
+        if nums[guess] == target:
             return True
-        
-binary_search(nums, 10)
-
+        if left_index > right_index:
+            print(guess)
+            return False
+print(binary_search(nums, -17))
 
